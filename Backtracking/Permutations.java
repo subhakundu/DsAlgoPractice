@@ -4,7 +4,9 @@
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
-        permutationGenerator(nums, new ArrayList<>(), result);
+        if (nums.length > 0) {
+            permutationGenerator(nums, new ArrayList<>(), result);   
+        }
         return result;
     }
     private void permutationGenerator(int[] nums, List<Integer> currentSubset, List<List<Integer>> result) {
